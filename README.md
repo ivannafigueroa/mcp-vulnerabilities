@@ -1,25 +1,6 @@
-# E-commerce MCP Assistant - Proper MCP Implementation
+# E-commerce MCP Assistant - Vulnerable MCP
 
-**Real MCP Protocol: This version follows the official Model Context Protocol specification**
-
-This project demonstrates an **intentionally insecure** E-commerce MCP (Model Context Protocol) assistant that follows the real MCP protocol specification. **Do not use in production!**
-
-## Why This Version?
-
-This is the **proper MCP implementation** that follows the official Model Context Protocol specification:
-- ✅ **Real MCP Protocol** - Uses JSON-RPC over stdio as specified
-- ✅ **Proper Message Format** - Follows MCP message structure and types
-- ✅ **Production Ready** - Compatible with real MCP clients
-- ✅ **Protocol Compliant** - Implements required MCP methods and responses
-- ✅ **Educational Security** - Demonstrates real-world MCP security vulnerabilities
-
-## MCP Protocol Implementation
-
-### **Communication Method**
-- **Transport**: JSON-RPC over stdio (standard input/output)
-- **Message Format**: JSON-RPC 2.0 specification
-- **Protocol Version**: 2024-11-05
-- **Error Handling**: Proper JSON-RPC error codes and messages
+This project demonstrates an **intentionally insecure** E-commerce MCP (Model Context Protocol) assistant. **Do not use in production!**
 
 ### **Required MCP Methods**
 - `initialize` - Initialize the MCP connection with protocol version and capabilities
@@ -222,28 +203,6 @@ After running the demo, check these files for exposed data:
 - `/tmp/product_data.txt` - Stolen product information and specifications
 - `/tmp/update_logs.txt` - Stolen update messages and communications
 
-## MCP Protocol Details
-
-### **Server Implementation**
-- Uses `subprocess` to manage server process
-- Communicates via stdin/stdout with JSON-RPC
-- Implements required MCP methods with proper error handling
-- Handles proper error responses with JSON-RPC error codes
-- Loads tools dynamically from `tools/` directory
-
-### **Client Implementation**
-- Starts server process automatically
-- Sends JSON-RPC requests with proper formatting
-- Handles MCP protocol messages and responses
-- Manages server lifecycle and cleanup
-- Provides interactive interface for testing tools
-
-### **Tool Integration**
-- Tools loaded dynamically from `tools/` directory
-- Each tool implements `run()` function with consistent interface
-- Tool descriptions and schemas provided for MCP protocol
-- Parameters passed as keyword arguments with validation
-- Error handling and logging implemented
 
 ## Educational Purpose Only
 
@@ -266,20 +225,7 @@ This code is intentionally insecure to teach security concepts in the context of
 10. **Follow MCP protocol security guidelines** - stay updated with best practices
 
 ### **E-commerce Specific**
-11. **Implement PCI-DSS compliance** for payment data handling
-12. **Use data encryption** for sensitive business information
-13. **Implement access controls** based on user roles and permissions
-14. **Monitor for data exfiltration** attempts and unusual tool usage
-15. **Regular penetration testing** of MCP implementations
-
-## Note: This is a Real MCP Server
-
-This version follows the official Model Context Protocol specification and can be used with real MCP clients. The implementation demonstrates both the power and risks of MCP tools in e-commerce environments.
-
-## Recent Updates
-
-- **Enhanced Security Documentation**: Added specific examples and attack vectors
-- **Improved Protocol Compliance**: Better JSON-RPC error handling and message formatting
-- **Expanded Vulnerability Examples**: More detailed descriptions of each security issue
-- **E-commerce Best Practices**: Added industry-specific security recommendations
-- **Interactive Demo Improvements**: Better user experience for testing vulnerabilities 
+11. **Use data encryption** for sensitive business information
+12. **Implement access controls** based on user roles and permissions
+13. **Monitor for data exfiltration** attempts and unusual tool usage
+14. **Regular penetration testing** of MCP implementations
