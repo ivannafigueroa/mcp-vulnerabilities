@@ -1,45 +1,6 @@
 # E-commerce MCP Assistant - Vulnerable MCP
 
-This project demonstrates an **intentionally insecure** E-commerce MCP (Model Context Protocol) assistant. **Do not use in production!**
-
-### **Required MCP Methods**
-- `initialize` - Initialize the MCP connection with protocol version and capabilities
-- `tools/list` - List available tools with descriptions and input schemas
-- `tools/call` - Call a specific tool with arguments
-
-### **Message Structure**
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "method": "tools/call",
-  "params": {
-    "name": "search_vendor",
-    "arguments": {
-      "name": "TechCorp"
-    }
-  }
-}
-```
-
-### **Response Format**
-```json
-{
-  "jsonrpc": "2.0",
-  "id": 1,
-  "result": {
-    "content": [
-      {
-        "type": "text",
-        "text": "Vendor found: TechCorp - Contact: vendor@example.com - Rating: 4.5"
-      }
-    ]
-  }
-}
-```
-
-## Purpose of the Agent
-
+This project demonstrates an **intentionally insecure** E-commerce MCP (Model Context Protocol) assistant.
 The **E-commerce Assistant Agent** is designed to help manage:
 - **Product listings** and inventory management
 - **Pricing information** and dynamic price updates
